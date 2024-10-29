@@ -36,3 +36,26 @@ const teamMembers = [
     img: "img/female3.png",
   },
 ];
+
+const cardsContainerEl = document.getElementById("cards-container");
+
+for (let index = 0; index < teamMembers.length; index++) {
+  const element = teamMembers[index];
+  cardsContainerEl.innerHTML += `
+    <div class="col-4 mb-5">
+        <div class="my_card">
+            <img class="img-fluid card-image mb-3" src="${element.img}" alt="foto di ${element.name}">
+            <div class="card-description p-2">
+                <h3 class="card-name mb-1">
+                    ${element.name}
+                </h3>
+                <p class="card-role mb-1">
+                    ${element.role}
+                </p>
+                <p class= "card-email mb-3">
+                    ${element.email}    
+                </p>
+            </div>
+        </div>
+    </div>`;
+}
